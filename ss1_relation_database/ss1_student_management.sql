@@ -1,12 +1,12 @@
-create database student_management;
-use student_management;
-create table class (
-id int,
-name varchar(50)
+CREATE DATABASE student_management;
+USE student_management;
+CREATE TABLE classes (
+id INT,
+name VARCHAR(50)
 );
-create table teacher (
-id int,
-name varchar(50),
-age varchar(50),
-country varchar(50)
+CREATE TABLE teacher (
+id INT,
+name VARCHAR(50),
+age VARCHAR(50),
+country VARCHAR(50)
 );
