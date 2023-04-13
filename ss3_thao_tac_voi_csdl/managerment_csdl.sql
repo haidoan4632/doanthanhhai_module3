@@ -1,67 +1,67 @@
--- drop database if exists QuanLySinhVien;
-CREATE DATABASE quanlysinhvien;
-USE quanlysinhvien;
-CREATE TABLE classes
+drop database if exists QuanLySinhVien;
+CREATE DATABASE QuanLySinhVien;
+USE QuanLySinhVien;
+CREATE TABLE Class
 (
-    classid   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    classname VARCHAR(60) NOT NULL,
-    startdate DATETIME NOT NULL,
-    status    BIT
+    ClassID   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ClassName VARCHAR(60) NOT NULL,
+    StartDate DATETIME    NOT NULL,
+    Status    BIT
 );
-CREATE TABLE student
+CREATE TABLE Student
 (
-    studentid   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    studentname VARCHAR(30) NOT NULL,
-    address     VARCHAR(50),
-    phone       VARCHAR(20),
-    status      BIT,
-    classid     INT NOT NULL,
-    FOREIGN KEY (classid) REFERENCES classes (classid)
+    StudentId   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    StudentName VARCHAR(30) NOT NULL,
+    Address     VARCHAR(50),
+    Phone       VARCHAR(20),
+    Status      BIT,
+    ClassId     INT         NOT NULL,
+    FOREIGN KEY (ClassId) REFERENCES Class (ClassID)
 );
-CREATE TABLE subject
+CREATE TABLE Subject
 (
-    subid   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    subName VARCHAR(30) NOT NULL,
-    credit  TINYINT     NOT NULL DEFAULT 1 CHECK ( Credit >= 1 ),
-    Status  BIT         DEFAULT 1
+    SubId   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    SubName VARCHAR(30) NOT NULL,
+    Credit  TINYINT     NOT NULL DEFAULT 1 CHECK ( Credit >= 1 ),
+    Status  BIT                  DEFAULT 1
 );
-CREATE TABLE mark
+CREATE TABLE Mark
 (
-    markid    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    subid     INT NOT NULL,
-    studentid INT NOT NULL,
-    nark      FLOAT   DEFAULT 0 CHECK ( Mark BETWEEN 0 AND 100),
-    examtimes TINYINT DEFAULT 1,
-    UNIQUE (subid, studentid),
-    FOREIGN KEY (subid) REFERENCES subject (subid),
-    FOREIGN KEY (studentid) REFERENCES student (studentId)
+    MarkId    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    SubId     INT NOT NULL,
+    StudentId INT NOT NULL,
+    Mark      FLOAT   DEFAULT 0 CHECK ( Mark BETWEEN 0 AND 100),
+    ExamTimes TINYINT DEFAULT 1,
+    UNIQUE (SubId, StudentId),
+    FOREIGN KEY (SubId) REFERENCES Subject (SubId),
+    FOREIGN KEY (StudentId) REFERENCES Student (StudentId)
 );
-INSERT INTO classes
+INSERT INTO Class
 VALUES (1, 'A1', '2008-12-20', 1);
-INSERT INTO classes
+INSERT INTO Class
 VALUES (2, 'A2', '2008-12-22', 1);
-INSERT INTO classes
+INSERT INTO Class
 VALUES (3, 'B3', current_date, 0);
 
-INSERT INTO student (studentName, address, phone, status, clasid)
+INSERT INTO Student (StudentName, Address, Phone, Status, ClassId)
 VALUES ('Hung', 'Ha Noi', '0912113113', 1, 1);
-INSERT INTO student (studentname, address, status, classid)
+INSERT INTO Student (StudentName, Address, Status, ClassId)
 VALUES ('Hoa', 'Hai phong', 1, 1);
-INSERT INTO Student (studentname, address, phone, status, classid)
+INSERT INTO Student (StudentName, Address, Phone, Status, ClassId)
 VALUES ('Manh', 'HCM', '0123123123', 0, 2);
 
-INSERT INTO subject
+INSERT INTO Subject
 VALUES (1, 'CF', 5, 1),
        (2, 'C', 6, 1),
        (3, 'HDJ', 5, 1),
        (4, 'RDBMS', 10, 1);
        
-INSERT INTO mark (subid, studentid, mark, examtimes)
+INSERT INTO Mark (SubId, StudentId, Mark, ExamTimes)
 VALUES (1, 1, 8, 1),
        (1, 2, 10, 2),
        (2, 1, 12, 1);
 -- hiển thị tất cả sinh viên có tên bắt đầu bằng ký tự 'h'
-USE quanlysinhvien;     
+USE QuanLySinhVien;     
 SELECT * FROM student WHERE studentname LIKE "h%" ;
 -- hiển thị các thông tin lớp học có thời gian bắt đầu vào tháng 12.
 SELECT * FROM class WHERE month(startdate)=12 ;
@@ -75,5 +75,5 @@ SET SQL_SAFE_UPDATES = 1;
 SELECT student.studentname,subject.subname,mark.mark FROM student 
 INNER JOIN mark ON student.studentid = mark.studentid
 INNER JOIN subject ON mark.subid = subject.subid
-ORDER BY mark desc;
+ORDER BY markb  desc;
 
