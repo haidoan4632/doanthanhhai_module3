@@ -69,14 +69,15 @@ SELECT * FROM subject
 
 -- Hiển thị các thông tin môn học có điểm thi lớn nhất.
 
-select subject.subid, subject.subname, subject.credit, subject.status, mark.mark from subject
-inner join mark on mark.subid = subject.subid
-where mark = (select max(mark) from mark);
+SELECT subject.subid, subject.subname, subject.credit, subject.status, mark.mark FROM subject
+INNER JOIN mark ON mark.subid = subject.subid
+WHERE mark = (SELECT MAX(mark) FROM mark);
 
 -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
   
-SELECT student.studentid,student.studentmame, AVG(mark) as avg_mark FROM student 
- join  mark on mark.studentid = student.studentid
+SELECT student.studentid,student.studentmame,AVG(mark) AS avg_mark
+FROM student
+JOIN mark ON mark.studentid = student.studentid
 GROUP BY studentid
-order by avg_mark desc;
+ORDER BY avg_mark DESC;
 
