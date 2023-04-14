@@ -1,4 +1,4 @@
-drop database if exists QuanLySinhVien;
+-- drop database if exists QuanLySinhVien;
 CREATE DATABASE QuanLySinhVien;
 USE QuanLySinhVien;
 CREATE TABLE Class
@@ -75,5 +75,5 @@ SET SQL_SAFE_UPDATES = 1;
 SELECT student.studentname,subject.subname,mark.mark FROM student 
 INNER JOIN mark ON student.studentid = mark.studentid
 INNER JOIN subject ON mark.subid = subject.subid
-ORDER BY markb  desc;
+ORDER BY mark desc;
 
