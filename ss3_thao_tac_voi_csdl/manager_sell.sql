@@ -2,21 +2,21 @@ CREATE DATABASE quan_ly_ban_hang_san_pham;
 USE quan_ly_ban_hang_san_pham;
 
 CREATE TABLE customer (
-    c_id INT PRIMARY KEY,
-    c_name VARCHAR(25),
+    c_id INT PRIMARY KEY AUTO_INCREMENT,
+    c_name VARCHAR(25) NOT NULL,
     c_age INT CHECK (c_age> 6)
 );
 
 CREATE TABLE order_product (
-    o_id INT PRIMARY KEY,
-    c_id INT,
-    o_date DATE,
+    o_id INT PRIMARY KEY AUTO_INCREMENT,
+    c_id INT  ,
+    o_date DATE NOT NULL,
     o_total_price INT,
     FOREIGN KEY (c_id)
         REFERENCES customer (c_id)
 );
 CREATE TABLE product (
-    p_id INT PRIMARY KEY,
+    p_id INT PRIMARY KEY ,
     p_name VARCHAR(25),
     p_price INT
 );

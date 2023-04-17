@@ -1,4 +1,4 @@
--- drop database if exists QuanLySinhVien;
+drop database if exists QuanLySinhVien;
 CREATE DATABASE QuanLySinhVien;
 USE QuanLySinhVien;
 CREATE TABLE Class
@@ -28,9 +28,9 @@ CREATE TABLE Subject
 CREATE TABLE Mark
 (
     MarkId    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    SubId     INT NOT NULL,
-    StudentId INT NOT NULL,
-    Mark      FLOAT   DEFAULT 0 CHECK ( Mark BETWEEN 0 AND 100),
+    subid     INT NOT NULL,
+    studentid INT NOT NULL,
+    point      FLOAT   DEFAULT 0 CHECK ( point BETWEEN 0 AND 100),
     ExamTimes TINYINT DEFAULT 1,
     UNIQUE (SubId, StudentId),
     FOREIGN KEY (SubId) REFERENCES Subject (SubId),
@@ -56,7 +56,7 @@ VALUES (1, 'CF', 5, 1),
        (3, 'HDJ', 5, 1),
        (4, 'RDBMS', 10, 1);
        
-INSERT INTO Mark (SubId, StudentId, Mark, ExamTimes)
+INSERT INTO Mark (SubId, StudentId, point, ExamTimes)
 VALUES (1, 1, 8, 1),
        (1, 2, 10, 2),
        (2, 1, 12, 1);
@@ -72,8 +72,8 @@ SET SQL_SAFE_UPDATES = 0;
 UPDATE student SET classid = 2 WHERE studentname = "Hung";
 SET SQL_SAFE_UPDATES = 1;
 -- Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần.
-SELECT student.studentname,subject.subname,mark.mark FROM student 
+SELECT student.studentname,subject.subname,mark.point FROM student 
 INNER JOIN mark ON student.studentid = mark.studentid
 INNER JOIN subject ON mark.subid = subject.subid
-ORDER BY mark desc, student.studentid;
+ORDER BY mark.point desc, student.studentid;
 

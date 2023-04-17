@@ -264,13 +264,14 @@ WHERE lk.ten_loai_khach = "Diamond" AND (kh.dia_chi LIKE '%Vinh%' OR  kh.dia_chi
 
 SELECT hd.ma_hop_dong, nv.ho_ten as ho_ten_nhan_vien , kh.ho_ten as ho_ten_khach_hang, kh.so_dien_thoai as so_dien_thoai_khach_hang,dv.ten_dich_vu, SUM(ifnull(hdct.so_luong,0)) as so_luong_dich_vu_di_kem,hd.tien_dat_coc
 FROM hop_dong_chi_tiet hdct
-LEFT JOIN hop_dong hd ON hdct.ma_hop_dong = hd.ma_hop_dong
-LEFT JOIN nhan_vien nv ON nv.ma_nhan_vien = hd.ma_nhan_vien
-LEFT JOIN khach_hang kh ON kh.ma_khach_hang = hd.ma_khach_hang 
-LEFT JOIN dich_vu dv ON dv.ma_dich_vu = hd.ma_dich_vu
-WHERE year(hd.ngay_lam_hop_dong) = 2020 AND(MONTH(hd.ngay_lam_hop_dong)BETWEEN 10 AND 12) 
+RIGHT JOIN hop_dong hd ON hdct.ma_hop_dong = hd.ma_hop_dong
+JOIN nhan_vien nv ON nv.ma_nhan_vien = hd.ma_nhan_vien
+JOIN khach_hang kh ON kh.ma_khach_hang = hd.ma_khach_hang 
+JOIN dich_vu dv ON dv.ma_dich_vu = hd.ma_dich_vu
+WHERE YEAR(hd.ngay_lam_hop_dong) = 2020 AND(MONTH(hd.ngay_lam_hop_dong)BETWEEN 10 AND 12) 
 AND hd.ngay_lam_hop_dong NOT IN (SELECT ngay_lam_hop_dong FROM hop_dong WHERE year(hd.ngay_lam_hop_dong) = 2021 AND (MONTH(hd.ngay_lam_hop_dong) BETWEEN 1 AND 6))
 GROUP BY hd.ma_hop_dong;
+
 
 -- task 12 bị mất đi 1 khách hàng tên dương văn quan
 
