@@ -4,7 +4,7 @@ USE quan_ly_ban_hang_san_pham;
 CREATE TABLE customer (
     c_id INT PRIMARY KEY,
     c_name VARCHAR(25),
-    c_age TINYINT
+    c_age INT CHECK (c_age> 6)
 );
 
 CREATE TABLE order_product (

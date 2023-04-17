@@ -75,5 +75,5 @@ SET SQL_SAFE_UPDATES = 1;
 SELECT student.studentname,subject.subname,mark.mark FROM student 
 INNER JOIN mark ON student.studentid = mark.studentid
 INNER JOIN subject ON mark.subid = subject.subid
-ORDER BY mark desc;
+ORDER BY mark desc, student.studentid;
 

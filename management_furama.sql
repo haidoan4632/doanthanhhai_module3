@@ -278,6 +278,18 @@ GROUP BY hd.ma_hop_dong;
 -- task 13:	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. 
 -- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
 
+SELECT dvdk.ma_dich_vu_di_kem,dvdk.ten_dich_vu_di_kem, SUM(hdct.so_luong) AS so_luong_dich_vu_di_kem
+FROM dich_vu_di_kem  dvdk
+JOIN hop_dong_chi_tiet  hdct ON dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+GROUP BY hdct.ma_dich_vu_di_kem
+HAVING so_luong_dich_vu_di_kem = (
+SELECT SUM(hdct.so_luong)  tong_so_luong
+FROM dich_vu_di_kem  dvdk
+JOIN hop_dong_chi_tiet  hdct ON dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+GROUP BY hdct.ma_dich_vu_di_kem
+ORDER BY tong_so_luong DESC LIMIT 1
+);
+
 
 -- task 14: Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.
 -- Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung (được tính dựa trên việc count các ma_dich_vu_di_kem).
@@ -287,7 +299,7 @@ JOIN dich_vu dv ON dv.ma_dich_vu = hd.ma_dich_vu
 RIGHT JOIN hop_dong_chi_tiet hdct ON hdct.ma_hop_dong = hd.ma_hop_dong
 JOIN loai_dich_vu ldv ON ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu
 JOIN dich_vu_di_kem dvdk ON dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
-GROUP BY hdct.ma_dich_vu_di_kem
+GROUP BY hdct.ma_dich_vu_di_kem,hd.ma_hop_dong
 HAVING so_lan_su_dung = 1;
 
 -- task 15: Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, ho_ten, ten_trinh_do, ten_bo_phan, 
@@ -299,3 +311,18 @@ JOIN trinh_do td ON td.ma_trinh_do = nv.ma_trinh_do
 JOIN bo_phan bp ON bp.ma_bo_phan = nv.ma_bo_phan
 GROUP BY hd.ma_nhan_vien
 HAVING COUNT(hd.ma_nhan_vien) <= 3;
+
+-- task 16:Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
+
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM nhan_vien
+WHERE nhan_vien.ma_nhan_vien NOT IN (
+SELECT ma_nhan_vien FROM hop_dong 
+WHERE year(ngay_lam_hop_dong) BETWEEN 2019 AND 2021
+GROUP BY nhan_vien.ma_nhan_vien);
+SET SQL_SAFE_UPDATES = 1;
+
+rollback; 
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM nhan_vien;
+SET SQL_SAFE_UPDATES = 1;
