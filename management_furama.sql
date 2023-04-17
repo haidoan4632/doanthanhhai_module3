@@ -145,15 +145,15 @@ WHERE
         
         
 -- task 3: Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
-SELECT 
-    *
-FROM
-    khach_hang
+SELECT * FROM khach_hang
 WHERE
-    (TIMESTAMPDIFF(YEAR, ngay_sinh, NOW()) BETWEEN 18 AND 50)
-        AND (dia_chi LIKE '%Đà Nẳng%'
-        OR dia_chi LIKE '%Quảng trị%');
+(TIMESTAMPDIFF(YEAR, ngay_sinh, NOW()) BETWEEN 18 AND 50)
+AND (dia_chi LIKE '%Đà Nẳng%'
+OR dia_chi LIKE '%Quảng trị%');
         
+SELECT * FROM khach_hang
+WHERE 
+
 -- chú thích: TIMESTAMPDIFF trong SQL là hàm dùng để tính số lượng giá trị khoảng cách thời gian (days, hours, minutes, seconds,...) 
 -- giữa hai giá trị ngày cho trước.
 
@@ -161,18 +161,10 @@ WHERE
 -- task 4: Đếm xem tương ứng với mỗi khách hàng đã từng đặt phòng bao nhiêu lần. 
 -- Kết quả hiển thị được sắp xếp tăng dần theo số lần đặt phòng của khách hàng. 
 -- Chỉ đếm những khách hàng nào có Tên loại khách hàng là “Diamond”.
-SELECT 
-    k.ma_khach_hang,
-    k.ho_ten,
-    COUNT(h.ma_hop_dong) AS so_lan_dat_phong
-FROM
-    khach_hang k
-        INNER JOIN
-    hop_dong h ON k.ma_khach_hang = h.ma_khach_hang
-        INNER JOIN
-    loai_khach l ON l.ma_loai_khach = k.ma_loai_khach
-WHERE
-    ten_loai_khach = 'Diamond'
+SELECT k.ma_khach_hang, k.ho_ten, COUNT(h.ma_hop_dong) AS so_lan_dat_phong FROM khach_hang k
+INNER JOIN hop_dong h ON k.ma_khach_hang = h.ma_khach_hang
+INNER JOIN loai_khach l ON l.ma_loai_khach = k.ma_loai_khach
+WHERE ten_loai_khach = 'Diamond'
 GROUP BY h.ma_khach_hang
 ORDER BY so_lan_dat_phong;
 
@@ -202,6 +194,10 @@ WHERE year(hop_dong.ngay_lam_hop_dong) = 2021
 AND (month(hop_dong.ngay_lam_hop_dong) BETWEEN 1 AND 3))
 GROUP BY ma_dich_vu ;
 
+SELECT dv.ma_dich_vu, dv.ten_dich_vu, dv.dien_tich, dv.chi_phi_thue, dv.ten_loai_dich_vu
+FROM dich_vu as dv
+join loai_dich_vu as ldv (ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu)
+where dv.ma_loai_dich_vu
 -- task 7:	Hiển thị thông tin ma_dich_vu, ten_dich_vu, dien_tich, so_nguoi_toi_da, chi_phi_thue,
 -- ten_loai_dich_vu của tất cả các loại dịch vụ đã từng được khách hàng đặt phòng trong năm 2020 nhưng
 -- chưa từng được khách hàng đặt phòng trong năm 2021.
@@ -327,3 +323,23 @@ rollback;
 SET SQL_SAFE_UPDATES = 0;
 DELETE FROM nhan_vien;
 SET SQL_SAFE_UPDATES = 1;
+
+-- task 17:	Cập nhật thông tin những khách hàng có ten_loai_khach từ Platinum lên Diamond,
+-- chỉ cập nhật những khách hàng đã từng đặt phòng với Tổng Tiền thanh toán trong năm 2021 là lớn hơn 10.000.000 VNĐ.
+
+
+
+-- task 18: Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
+
+
+-- task 19: 
+
+
+-- task 20: Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống, 
+-- thông tin hiển thị bao gồm id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
+
+SELECT nv.ma_nhan_vien, nv.ho_ten,nv.email,nv.so_dien_thoaii,nv.ngay_sinh,nv.dia_chi
+FROM nhan_vien nv 
+UNION ALL
+SELECT kh.ma_khach_hang,kh.ho_ten,kh.email, kh.so_dien_thoai,kh.ngay_sinh,kh.dia_chi 
+FROM khach_hang kh
