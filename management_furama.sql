@@ -273,7 +273,7 @@ AND hd.ngay_lam_hop_dong NOT IN (SELECT ngay_lam_hop_dong FROM hop_dong WHERE ye
 GROUP BY hd.ma_hop_dong;
 
 
--- task 12 bị mất đi 1 khách hàng tên dương văn quan
+-- task 12 bị mất đi 1 khách hàng tên dương văn quan (đã fixed ở dòng 267)
 
 
 -- task 13:	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. 
