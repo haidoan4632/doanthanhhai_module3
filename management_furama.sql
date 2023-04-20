@@ -151,9 +151,9 @@ WHERE
 AND (dia_chi LIKE '%Đà Nẳng%'
 OR dia_chi LIKE '%Quảng trị%');
         
-
--- chú thích: TIMESTAMPDIFF trong SQL là hàm dùng để tính số lượng giá trị khoảng cách thời gian (days, hours, minutes, seconds,...) 
--- giữa hai giá trị ngày cho trước.
+-- chú thích:Câu lệnh (timestampdiff(year, ngay_sinh, now()) between 18 and 50) có nghĩa là lấy số năm giữa ngày sinh
+-- và thời điểm hiện tại, sau đó kiểm tra xem số năm đó có nằm trong khoảng từ 18 đến 50 không.
+-- Nếu có, kết quả trả về sẽ là True (đúng), nếu không thì kết quả trả về là False (sai).
 
 
 -- task 4: Đếm xem tương ứng với mỗi khách hàng đã từng đặt phòng bao nhiêu lần. 
@@ -365,9 +365,6 @@ HAVING lk.ten_loai_khach = 'Platinium'
 AND nam_thanh_toan_tien = 2021
 AND tien_thanh_toan >= 1000000;
 
-
-
-
 SELECT * FROM task_17;
 UPDATE loai_khach SET ten_loai_khach = 'Diamond'
 WHERE loai_khach.ma_loai_khach IN (SELECT ma_loai_khach FROM task_17);
@@ -385,10 +382,11 @@ GROUP BY hd.ma_hop_dong
 HAVING nam_lam_hop_dong <2021;
 
 SELECT * FROM task_18;
+SET SQL_SAFE_UPDATES = 0;
 set foreign_key_checks=0;
 DELETE FROM khach_hang kh WHERE kh.ma_khach_hang IN (SELECT ma_khach_hang FROM task_18);
 set foreign_key_checks=1;
-
+SET SQL_SAFE_UPDATES = 1;
 
 
 -- task 19:	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.

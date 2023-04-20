@@ -1,0 +1,23 @@
+div {
+    font-family: "Times New Roman";
+    font-size: 20px;
+    font-weight: normal;
+    position: relative;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
+    /*width: 95%;*/
+    padding-left: 30px;
+    text-align: justify;
+    width: 700px;
+}
+
+h1 {
+    display: block;
+    /*text-decoration: underline;*/
+    border-bottom: 1px solid blue;
+    width: 700px;
+}
+
+p {
+   text-indent: 20px;
+}
