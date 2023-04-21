@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+#view{
+    position: relative;
+
+}
+.header{
+    position: fixed;
+    background: black;
+    height: 50px;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.nav-items {
+    display: flex;
+    padding: 4pt 10pt;
+}
+
+.nav-item {
+    color: lightgray;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.auth-buttons {
+    margin-right: 25px;
+}
+ul{
+    list-style: none;
+}
+.container{
+    position: relative;
+    top:50px;
+    left: 0px;
+    right: 0px;
+    height: calc(100vh - 100px);
+}
+.center{
+    display: block;
+    text-align: center;
+    padding-top: 50px;
+}
+.bg-lightgray {
+    background-color: lightgray;
+}
+.a{
+    display: block;
+    font-size: 25px;
+    margin: 20px;
+}
+.document{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+p{
+    font-size: 25px;
+    color: darkblue;
+
+}
+
+.col-m-1 {width: 8.33333%;}
+.col-m-2 {width: 16.66667%;}
+.col-m-3 {width: 25%;}
+.col-m-4 {width: 33.33333%;}
+.col-m-5 {width: 41.66667%;}
+.col-m-6 {width: 50%;}
+.col-m-7 {width: 58.33333%;}
+.col-m-8 {width: 66.66667%;}
+.col-m-9 {width: 75%;}
+.col-m-10 {width: 83.33333%;}
+.col-m-11 {width: 91.66667%;}
+.col-m-12 {width: 100%;}
+
+/*Màn hinh laptop và máy tính bảng*/
+@media only screen and (min-width:741px)and (max-width:1240px){
+
+}
+
+    .button2{
+        display: block;
+        border: 1px solid lightgrey;
+        background-color: gainsboro;
+        padding: 40px 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+
+    }
+
+    .login {
+        color: white;
+        list-style: none;
+        display: inline;
+    }
+.footer{
+    position: fixed;
+    background:#7abaff;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
