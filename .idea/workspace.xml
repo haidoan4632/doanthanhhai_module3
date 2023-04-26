@@ -20,15 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="922aa04b-998b-4078-94a3-e917ca121b2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/module 3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/module 3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss8_bootstrap/tao_gallery_don_gian_su_dung_bootstrap/tao_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss8_bootstrap/tao_gallery_don_gian_su_dung_bootstrap/tao_gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss8_bootstrap/xay_dung_landing_page/xay_dung_landing_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/ss8_bootstrap/xay_dung_landing_page/xay_dung_landing_page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss8_bootstrap/xay_dung_landing_page/xay_dung_landing_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss8_bootstrap/xay_dung_landing_page/xay_dung_landing_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss8_bootstrap/xay_dung_landing_page/xay_dung_landing_page_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss8_bootstrap/xay_dung_landing_page/xay_dung_landing_page_1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +53,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -67,6 +72,7 @@
       <updated>1682480008458</updated>
       <workItem from="1682480012457" duration="84000" />
       <workItem from="1682480119130" duration="242000" />
+      <workItem from="1682512571611" duration="5068000" />
     </task>
     <servers />
   </component>
