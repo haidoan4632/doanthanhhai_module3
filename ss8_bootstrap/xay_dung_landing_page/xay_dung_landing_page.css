@@ -1,6 +1,5 @@
-.background{
+.background1{
     background-image: url('https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Hero_FY24_Surface-homepage_169?scl=1');
     background-size: cover;
-    background-position: center;
-    height: 100%;
+    display: flex;
 }
