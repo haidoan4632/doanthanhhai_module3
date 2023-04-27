@@ -19,16 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="922aa04b-998b-4078-94a3-e917ca121b2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/module 3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss8_bootstrap/tao_gallery_don_gian_su_dung_bootstrap/tao_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss8_bootstrap/tao_gallery_don_gian_su_dung_bootstrap/tao_gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss8_bootstrap/xay_dung_landing_page/xay_dung_landing_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/ss8_bootstrap/xay_dung_landing_page/xay_dung_landing_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss8_bootstrap/xay_dung_landing_page/xay_dung_landing_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss8_bootstrap/xay_dung_landing_page/xay_dung_landing_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss8_bootstrap/xay_dung_landing_page/xay_dung_landing_page_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss8_bootstrap/xay_dung_landing_page/xay_dung_landing_page_1.html" afterDir="false" />
-    </list>
+    <list default="true" id="5cae3c7a-ce6e-4bb6-98f9-5fe842c28f31" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,10 +30,22 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2OwmRG6sPXiZimbo0jvkRonMKLV" />
+  <component name="ProjectId" id="2OzWRBONFwc8v7x4KyYepFX0s9c" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -53,26 +56,70 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="jdk.selected.JAVA_MODULE" value="19" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="module3" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="module3" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="922aa04b-998b-4078-94a3-e917ca121b2c" name="Default Changelist" comment="" />
-      <created>1682480008458</created>
+      <changelist id="5cae3c7a-ce6e-4bb6-98f9-5fe842c28f31" name="Default Changelist" comment="" />
+      <created>1682563879354</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1682480008458</updated>
-      <workItem from="1682480012457" duration="84000" />
-      <workItem from="1682480119130" duration="242000" />
-      <workItem from="1682512571611" duration="5068000" />
+      <updated>1682563879354</updated>
+      <workItem from="1682563883458" duration="859000" />
+      <workItem from="1682564989084" duration="179000" />
     </task>
     <servers />
   </component>
@@ -92,13 +139,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1682480358354">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1682565146340">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1682480358354" />
-    <state x="209" y="19" key="new project wizard" timestamp="1682480359671">
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1682565146340" />
+    <state x="209" y="19" key="new project wizard" timestamp="1682565167162">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="209" y="19" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1682480359671" />
+    <state x="209" y="19" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1682565167162" />
   </component>
 </project>
