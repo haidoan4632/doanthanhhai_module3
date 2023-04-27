@@ -6,8 +6,7 @@ public class CalculatorServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         float firstOperand = Float.parseFloat(request.getParameter("first-operand"));
         float secondOperand = Float.parseFloat(request.getParameter("second-operand"));
-        float result =0;
-        PrintWriter writer = response.getWriter();
+        float result;
         String operator = request.getParameter("operator");
         switch (operator) {
             case "Addition":
@@ -26,14 +25,16 @@ public class CalculatorServlet extends javax.servlet.http.HttpServlet {
                     throw new RuntimeException("Lỗi");
                 }
                 break;
+            default:
+                throw new RuntimeException();
         }
         request.setAttribute("result", result);
         request.setAttribute("firstOperand", firstOperand);
         request.setAttribute("secondOperand", secondOperand);
         request.setAttribute("operator", operator);
-        if (operator.equals("Division") && secondOperand == 0) {
+        if (secondOperand == 0) {
         } else {
-            request.getRequestDispatcher("Calculator.jsp").forward(request, response);
+            request.getRequestDispatcher("/Calculator.jsp").forward(request, response);
         }
     }
 
