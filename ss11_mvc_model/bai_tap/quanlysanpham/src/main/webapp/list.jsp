@@ -23,26 +23,39 @@
         <th>RateProduct</th>
         <th>ProductDescription</th>
         <th>Producer</th>
+        <th>create</th>
         <th>Delete</th>
+        <th>Edit</th>
+
+        <th></th>
     </tr>
     </thead>
     <tbody>
     <c:forEach var="product" items="${productManagementList}">
         <tr>
-
             <td>${product.getId()}</td>
             <td>${product.getNameProduct()}</td>
             <td>${product.getRateProduct()}</td>
             <td>${product.getProductDescription()}</td>
             <td>${product.getProducer()}</td>
-            <td>
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" value="">
-                    Delete
+            <th>
+                <button onclick="window.location.href='/productManagament?action=create&id=${product.getId()}'" type="button"
+                        class="btn btn-danger">Create
                 </button>
-            </td>
+            </th>
+            <th>
+                <button onclick="window.location.href='/productManagament?action=delete&id=${product.getId()}'" type="button"
+                        class="btn btn-danger">Delete
+                </button>
+            </th>
+            <th>
+                <button onclick="window.location.href='/Product?action=edit&id=${product.getId()}'" type="button"
+                        class="btn btn-secondary">Edit
+                </button>
             </th>
         </tr>
 
+        </tr>
     </c:forEach>
 
     </tbody>

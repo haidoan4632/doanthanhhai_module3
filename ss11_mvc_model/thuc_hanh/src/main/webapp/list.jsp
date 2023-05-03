@@ -61,12 +61,18 @@
 
             <td>${student.getClassId()}</td>
             <th>
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal${student.id}">
-                    Xóa
+                <button onclick="window.location.href='/Product?action=edit&id=${product.id}'" type="button"
+                        class="btn btn-secondary">Edit
+                </button>
+            </th>
+            <th>
+                <button onclick="window.location.href='/Product?action=delete&id=${product.id}'" type="button"
+                        class="btn btn-danger">Delete
                 </button>
             </th>
         </tr>
-        <div class="modal fade" id="deleteModal${student.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="deleteModal${student.getId()}" tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -74,7 +80,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        Bạn có muốn xóa học sinh có tên là ${student.name}
+                        Bạn có muốn xóa học sinh có tên là ${student.getName()}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

@@ -32,9 +32,10 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void remove(String name) {
-        productRepository.remove(name);
+    public void remove(int id) {
+        productRepository.remove(id);
     }
+
 
     @Override
     public ProductManagement findName(String name) {

@@ -10,7 +10,7 @@ public interface IProductRepository {
 
     public void update(int id, ProductManagement productManagement) ;
 
-    public void remove(String name) ;
+    public void remove(int id) ;
 
     public ProductManagement findName(String name);
 

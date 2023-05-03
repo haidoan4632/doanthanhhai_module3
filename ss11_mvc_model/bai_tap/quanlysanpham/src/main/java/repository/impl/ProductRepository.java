@@ -33,9 +33,10 @@ public class ProductRepository implements IProductRepository {
     }
 
     @Override
-    public void remove(String name) {
-
+    public void remove(int id) {
+        productManagementList.remove(id);
     }
+
 
     @Override
     public ProductManagement findName(String name) {

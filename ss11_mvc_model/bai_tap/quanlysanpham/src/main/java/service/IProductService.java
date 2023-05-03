@@ -11,7 +11,7 @@ public interface IProductService {
 
      void update(int id, ProductManagement productManagement) ;
 
-     void remove(String name) ;
+     void remove(int id) ;
 
      ProductManagement findName(String name);
 
