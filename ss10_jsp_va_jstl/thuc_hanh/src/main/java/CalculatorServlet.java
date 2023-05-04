@@ -9,20 +9,20 @@ public class CalculatorServlet extends javax.servlet.http.HttpServlet {
         float result;
         String operator = request.getParameter("operator");
         switch (operator) {
-            case "Addition":
+            case "+":
                 result = firstOperand + secondOperand;
                 break;
-            case "Subtraction":
+            case "-":
                 result = firstOperand - secondOperand;
                 break;
-            case "Multiplication":
+            case "*":
                 result = firstOperand * secondOperand;
                 break;
-            case "Division":
+            case "/":
                 if (secondOperand != 0) {
                     result = firstOperand / secondOperand;
                 } else {
-                    throw new RuntimeException("Lỗi");
+                    throw new RuntimeException("Lỗi do số chia bằng không");
                 }
                 break;
             default:

@@ -61,10 +61,16 @@ public class ProductServlet extends HttpServlet {
                 break;
             }
             case "delete": {
-                int id = Integer.parseInt(request.getParameter("id"));
-                productService.remove(id);
+                showDeleteProduct(request, response);
+                break;
             }
         }
+    }
+
+    private void showDeleteProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        productService.remove(id);
+        showList(request, response);
     }
 
     public void createProduct(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -74,9 +80,8 @@ public class ProductServlet extends HttpServlet {
         String productDescription = request.getParameter("productDescription");
         String producer = request.getParameter("producer");
         productService.save(new ProductManagement(id, nameProduct, rateProduct, productDescription, producer));
-        List<ProductManagement> productManagementList = productService.findAll();
-        request.setAttribute("productManagementList", productManagementList);
-        request.getRequestDispatcher("/list.jsp").forward(request, response);
+//        List<ProductManagement> productManagementList = productService.findAll();
+        showList(request, response);
     }
 
 }

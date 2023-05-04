@@ -14,7 +14,7 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-<form action="/productManagament" method="post">
+<form action="/productManagament?action=create" method="post">
     <label>ID</label>
     <input class="form-control" name="id"><br>
     <label>NameProduct</label>

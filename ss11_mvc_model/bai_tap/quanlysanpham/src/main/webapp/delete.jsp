@@ -14,12 +14,10 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/productManagament" method="post">
-    <td>Xóa sản phẩm có id = ${id} ra khỏi danh sách</td>
+<form action="/productManagament?action=delete" method="post">
+    <input name="id" value="${id}">
     <th>
-        <button onclick="window.location.href='/productManagament?action=delete&id=${id}'" type="button"
-                class="btn btn-danger">Delete
-        </button>
+        <button class="btn btn-success" type="submit">Delete</button>
     </th>
 </form>
 </body>

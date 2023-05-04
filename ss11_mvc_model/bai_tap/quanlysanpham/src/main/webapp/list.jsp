@@ -15,6 +15,11 @@
     <title>Hiển thị danh sách quản lý sản phẩm</title>
 </head>
 <body>
+<th>
+    <button onclick="window.location.href='/productManagament?action=create&id=${product.getId()}'" type="button"
+            class="btn btn-danger">Create
+    </button>
+</th>
 <table class="table table-striped">
     <thead>
     <tr>
@@ -23,7 +28,6 @@
         <th>RateProduct</th>
         <th>ProductDescription</th>
         <th>Producer</th>
-        <th>create</th>
         <th>Delete</th>
         <th>Edit</th>
 
@@ -31,6 +35,7 @@
     </tr>
     </thead>
     <tbody>
+
     <c:forEach var="product" items="${productManagementList}">
         <tr>
             <td>${product.getId()}</td>
@@ -38,11 +43,7 @@
             <td>${product.getRateProduct()}</td>
             <td>${product.getProductDescription()}</td>
             <td>${product.getProducer()}</td>
-            <th>
-                <button onclick="window.location.href='/productManagament?action=create&id=${product.getId()}'" type="button"
-                        class="btn btn-danger">Create
-                </button>
-            </th>
+
             <th>
                 <button onclick="window.location.href='/productManagament?action=delete&id=${product.getId()}'" type="button"
                         class="btn btn-danger">Delete

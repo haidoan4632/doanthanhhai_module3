@@ -27,10 +27,10 @@
                 <td><label>Operator</label></td>
                 <td>
                     <select name="operator">
-                        <option>Addition</option>
-                        <option>Subtraction</option>
-                        <option>Multiplication</option>
-                        <option>Division</option>
+                        <option>+</option>
+                        <option>-</option>
+                        <option>*</option>
+                        <option>/</option>
                     </select>
                 </td>
             </tr>
