@@ -41,6 +41,11 @@
             </tr>
         </c:forEach>
     </table>
+    <th>
+        <button onclick="window.location.href='/user?action=create'" type="button"
+                class="btn btn-danger">Create
+        </button>
+    </th>
 </div>
 </body>
 </html>

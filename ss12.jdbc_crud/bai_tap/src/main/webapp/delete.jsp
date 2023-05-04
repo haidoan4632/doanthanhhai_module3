@@ -14,7 +14,7 @@
 <body>
 <form action="/user?action=delete"method="post">
     <input name="id" value="${id}">
-    <button class="btn btn-success" type="submit"></button>
+    <button class="btn btn-success" type="submit">Delete</button>
 </form>
 </body>
 </html>

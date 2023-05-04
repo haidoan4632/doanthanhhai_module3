@@ -9,9 +9,11 @@ public interface IUserDaoService {
 
     void save(User user);
 
-    void update(int id, User user) ;
+    User findById(int id);
 
-    List<User> remove(int id) ;
+    void update(int id, User user);
+
+    void remove(int id);
 
     User findName(String country);
 }

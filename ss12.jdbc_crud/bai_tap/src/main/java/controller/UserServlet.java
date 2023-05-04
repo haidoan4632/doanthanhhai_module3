@@ -27,15 +27,31 @@ public class UserServlet extends HttpServlet {
                 break;
             }
             case "delete": {
-                int id = Integer.parseInt(request.getParameter("id"));
-                request.setAttribute("id", id);
-                request.getRequestDispatcher("/delete.jsp").forward(request, response);
+                deleteUser(request, response);
+                break;
+            }
+            case "edit": {
+                editUser(request, response);
                 break;
             }
             default: {
                 showList(request, response);
             }
         }
+    }
+
+    private void editUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        User user = userDaoService.findById(id);
+        request.setAttribute("user", user);
+        request.getRequestDispatcher("/edit").forward(request, response);
+    }
+
+
+    private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        request.setAttribute("id", id);
+        request.getRequestDispatcher("/delete.jsp").forward(request, response);
     }
 
     public void showList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -58,14 +74,41 @@ public class UserServlet extends HttpServlet {
                 showDeleteUser(request, response);
                 break;
             }
+            case "create": {
+                showCreate(request, response);
+                break;
+            }
+            case "edit": {
+                showEditUser(request, response);
+                break;
+            }
             default: {
 
             }
         }
     }
+
+    private void showEditUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String country = request.getParameter("country");
+        userDaoService.update(id,new User(name,email,country));
+        showList(request, response);
+    }
+
+    private void showCreate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String country = request.getParameter("country");
+        userDaoService.save(new User(id, name, email, country));
+        showList(request, response);
+    }
+
     private void showDeleteUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        List<User> userList = userDaoService.remove(id);
+        userDaoService.remove(id);
         showList(request, response);
     }
 }

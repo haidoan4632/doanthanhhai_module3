@@ -22,18 +22,23 @@ public class UserDaoService implements IUserDaoService {
 
     @Override
     public void save(User user) {
+        userDaoRepository.save(user);
+    }
 
+    @Override
+    public User findById(int id) {
+        User user = userDaoRepository.findById(id);
+        return user;
     }
 
     @Override
     public void update(int id, User user) {
-
+        userDaoRepository.update(id, user);
     }
 
     @Override
-    public List<User> remove(int id) {
+    public void remove(int id) {
         userDaoRepository.remove(id);
-        return null;
     }
 
     @Override
