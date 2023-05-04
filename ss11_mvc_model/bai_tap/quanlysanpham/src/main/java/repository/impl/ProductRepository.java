@@ -37,11 +37,10 @@ public class ProductRepository implements IProductRepository {
         for (ProductManagement productManagement : productManagementList) {
             if (productManagement.getId() == id) {
            productManagementList.remove(productManagement);
+           return;
             }
         }
     }
-
-
     @Override
     public ProductManagement findName(String name) {
         for (ProductManagement productManagement : productManagementList) {
