@@ -42,7 +42,12 @@ public class UserDaoService implements IUserDaoService {
     }
 
     @Override
-    public User findName(String country) {
-        return null;
+    public List<User> findCountry(String country) {
+       return userDaoRepository.findCountry(country);
+    }
+
+    @Override
+    public List<User> sortName( ) {
+        return userDaoRepository.sortName();
     }
 }

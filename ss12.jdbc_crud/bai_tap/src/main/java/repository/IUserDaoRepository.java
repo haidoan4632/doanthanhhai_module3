@@ -5,7 +5,7 @@ import model.User;
 import java.util.List;
 
 public interface IUserDaoRepository {
-    List<User> findAll() ;
+    List<User> findAll();
 
     void save(User user);
 
@@ -13,7 +13,9 @@ public interface IUserDaoRepository {
 
     void update(int id, User user);
 
-    void remove(int id) ;
+    void remove(int id);
 
-    User findName(String country);
+    List<User> findCountry(String country);
+
+    List<User> sortName();
 }

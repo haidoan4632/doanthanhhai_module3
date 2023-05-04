@@ -34,6 +34,21 @@ public class UserServlet extends HttpServlet {
                 editUser(request, response);
                 break;
             }
+            case "sortName": {
+                List<User> userList;
+                userList = userDaoService.sortName();
+                request.setAttribute("userList", userList);
+                request.getRequestDispatcher("/list.jsp").forward(request, response);
+                showList(request, response);
+                break;
+            }
+            case "search": {
+                String country=request.getParameter("country");
+                request.setAttribute("userList",userDaoService.findCountry(country));
+                request.getRequestDispatcher("/list.jsp").forward(request,response);
+                showList(request, response);
+                break;
+            }
             default: {
                 showList(request, response);
             }
@@ -44,7 +59,7 @@ public class UserServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         User user = userDaoService.findById(id);
         request.setAttribute("user", user);
-        request.getRequestDispatcher("/edit").forward(request, response);
+        request.getRequestDispatcher("/edit.jsp").forward(request, response);
     }
 
 
