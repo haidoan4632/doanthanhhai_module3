@@ -2,30 +2,32 @@ package repository;
 
 import model.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoRepository implements IUserDaoRepository {
-    private final String SELLECT_ALL = "SELECT * FROM demo1.users;";
-    private final String DELETE_ID = "DELETE FROM users WHERE id =?;";
+    private final String SELECT_ALL = "CALL hien_thi();";
+    private final String UPDATE_USERS = " CALL edit_user( ?,?,?,?);";
+    private final String DELETE_ID = " CALL delete_user(?);";
+
+
+    //    private final String SELECT_ALL = "SELECT * FROM demo1.users;";
+//    private final String DELETE_ID = "DELETE FROM users WHERE id =?;";
+//private final String UPDATE_USERS = "update users set name = ?,email= ?, country =? where id = ?;";
     private final String INSERT_INTO = "INSERT INTO users(id,name,email,country) values(?,?,?,?);";
     private final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
-    private final String UPDATE_USERS = "update users set name = ?,email= ?, country =? where id = ?;";
     private final String SELECT_USER_BY_COUNTRY = "SELECT * FROM users WHERE country LIKE ?;";
     private final String SORT_NAME = "SELECT * FROM users ORDER BY users.name ASC;";
+
     @Override
     public List<User> findAll() {
         List<User> userList = new ArrayList<>();
         //kết nối db và trả về list
         Connection connection = BaseRepository.getConnectDB();
-        PreparedStatement preparedStatement;
         try {
-            preparedStatement = connection.prepareStatement(SELLECT_ALL);
-            ResultSet resultSet = preparedStatement.executeQuery();
+            CallableStatement callableStatement = connection.prepareCall(SELECT_ALL);
+            ResultSet resultSet = callableStatement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
@@ -33,9 +35,25 @@ public class UserDaoRepository implements IUserDaoRepository {
                 String country = resultSet.getString("country");
                 userList.add(new User(id, name, email, country));
             }
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+
+//        PreparedStatement preparedStatement;
+//        try {
+//            preparedStatement = connection.prepareStatement(SELECT_ALL);
+//            ResultSet resultSet = preparedStatement.executeQuery();
+//            while (resultSet.next()) {
+//                int id = resultSet.getInt("id");
+//                String name = resultSet.getString("name");
+//                String email = resultSet.getString("email");
+//                String country = resultSet.getString("country");
+//                userList.add(new User(id, name, email, country));
+//            }
+//        } catch (SQLException throwables) {
+//            throwables.printStackTrace();
+//        }
         return userList;
     }
 
@@ -73,9 +91,15 @@ public class UserDaoRepository implements IUserDaoRepository {
             preparedStatement.setString(2, user.getName());
             preparedStatement.setString(3, user.getEmail());
             preparedStatement.setString(4, user.getCountry());
-            preparedStatement.executeUpdate();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            int rowAffect = preparedStatement.executeUpdate();
+            if (rowAffect == 1) {
+                connection.commit();
+            } else {
+                connection.rollback();
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
     }
@@ -105,31 +129,61 @@ public class UserDaoRepository implements IUserDaoRepository {
     @Override
     public void update(int id, User user) {
         Connection connection = BaseRepository.getConnectDB();
-        PreparedStatement preparedStatement = null;
+        CallableStatement callableStatement = null;
         try {
-            preparedStatement = connection.prepareStatement(UPDATE_USERS);
-            preparedStatement.setString(1, user.getName());
-            preparedStatement.setString(2, user.getEmail());
-            preparedStatement.setString(3, user.getCountry());
-            preparedStatement.setInt(4, id);
-            preparedStatement.executeUpdate();
+            callableStatement = connection.prepareCall(UPDATE_USERS);
+            callableStatement.setString(2, user.getName());
+            callableStatement.setString(3, user.getEmail());
+            callableStatement.setString(4, user.getCountry());
+            callableStatement.setInt(1, id);
+            callableStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
     }
+
+//    @Override
+//    public void update(int id, User user) {
+//        Connection connection = BaseRepository.getConnectDB();
+//        PreparedStatement preparedStatement = null;
+//        try {
+//            preparedStatement = connection.prepareStatement(UPDATE_USERS);
+//            preparedStatement.setString(1, user.getName());
+//            preparedStatement.setString(2, user.getEmail());
+//            preparedStatement.setString(3, user.getCountry());
+//            preparedStatement.setInt(4, id);
+//            preparedStatement.executeUpdate();
+//        } catch (SQLException throwables) {
+//            throwables.printStackTrace();
+//        }
+//
+//    }
 
     @Override
     public void remove(int id) {
         Connection connection = BaseRepository.getConnectDB();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_ID);
-            preparedStatement.setInt(1, id);
-            preparedStatement.executeUpdate();
+            CallableStatement callableStatement = connection.prepareCall(DELETE_ID);
+            callableStatement.setInt(1, id);
+            callableStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
+
+
+//    @Override
+//    public void remove(int id) {
+//        Connection connection = BaseRepository.getConnectDB();
+//        try {
+//            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_ID);
+//            preparedStatement.setInt(1, id);
+//            preparedStatement.executeUpdate();
+//        } catch (SQLException throwables) {
+//            throwables.printStackTrace();
+//        }
+//    }
 
     @Override
     public List<User> sortName() {
@@ -138,7 +192,7 @@ public class UserDaoRepository implements IUserDaoRepository {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SORT_NAME);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String email = resultSet.getString("email");
