@@ -1,6 +1,6 @@
 package controller;
 
-import model.ProductManagement;
+import model.Product;
 import service.IProductService;
 import service.impl.ProductService;
 
@@ -32,6 +32,9 @@ public class ProductServlet extends HttpServlet {
                 break;
             }
             case "edit": {
+                int id = Integer.parseInt(request.getParameter("id"));
+                Product product = productService.findById(id);
+                request.setAttribute("product", product);
                 request.getRequestDispatcher("/edit.jsp").forward(request, response);
                 break;
             }
@@ -41,11 +44,11 @@ public class ProductServlet extends HttpServlet {
         }
     }
     public void showList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<ProductManagement> productManagementList = productService.findAll();
-        if (productManagementList == null) {
+        List<Product> productList = productService.findAll();
+        if (productList == null) {
             request.getRequestDispatcher("/error.jsp").forward(request, response);
         } else {
-            request.setAttribute("productManagementList", productManagementList);
+            request.setAttribute("productList", productList);
             request.getRequestDispatcher("/list.jsp").forward(request, response);
         }
     }
@@ -64,7 +67,21 @@ public class ProductServlet extends HttpServlet {
                 showDeleteProduct(request, response);
                 break;
             }
+            case "edit": {
+                showEditProduct(request, response);
+                break;
+            }
         }
+    }
+
+    private void showEditProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        int rateProduct = Integer.parseInt(request.getParameter("RateProduct"));
+        String nameProduct = request.getParameter("nameProduct");
+        String productDescription = request.getParameter("ProductDescription");
+        String producer = request.getParameter("Producer");
+        productService.update(id, new Product(nameProduct, rateProduct, productDescription, producer));
+        showList(request, response);
     }
 
     private void showDeleteProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -79,8 +96,8 @@ public class ProductServlet extends HttpServlet {
         int rateProduct = Integer.parseInt(request.getParameter("rateProduct"));
         String productDescription = request.getParameter("productDescription");
         String producer = request.getParameter("producer");
-        productService.save(new ProductManagement(id, nameProduct, rateProduct, productDescription, producer));
-//        List<ProductManagement> productManagementList = productService.findAll();
+        productService.save(new Product(id, nameProduct, rateProduct, productDescription, producer));
+//        List<Product> productManagementList = productService.findAll();
         showList(request, response);
     }
 

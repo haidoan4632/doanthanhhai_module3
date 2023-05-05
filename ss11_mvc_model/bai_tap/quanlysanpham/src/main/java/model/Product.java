@@ -1,17 +1,24 @@
 package model;
 
-public class ProductManagement {
+public class Product {
     private int id;
     private String nameProduct;
     private int rateProduct;
     private String productDescription;
     private String producer;
 
-    public ProductManagement() {
+    public Product() {
     }
 
-    public ProductManagement(int id, String nameProduct, int rateProduct, String productDescription, String producer) {
+    public Product(int id, String nameProduct, int rateProduct, String productDescription, String producer) {
         this.id = id;
+        this.nameProduct = nameProduct;
+        this.rateProduct = rateProduct;
+        this.productDescription = productDescription;
+        this.producer = producer;
+    }
+
+    public Product(String nameProduct, int rateProduct, String productDescription, String producer) {
         this.nameProduct = nameProduct;
         this.rateProduct = rateProduct;
         this.productDescription = productDescription;

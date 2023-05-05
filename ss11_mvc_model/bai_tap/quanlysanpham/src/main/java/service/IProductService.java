@@ -1,18 +1,18 @@
 package service;
 
-import model.ProductManagement;
+import model.Product;
 
 import java.util.List;
 
 public interface IProductService {
-     List<ProductManagement> findAll() ;
+     List<Product> findAll();
 
-     void save(ProductManagement productManagement);
+     void save(Product product);
 
-     void update(int id, ProductManagement productManagement) ;
+     void update(int id, Product product);
 
-     void remove(int id) ;
+     void remove(int id);
 
-     ProductManagement findName(String name);
 
+     Product findById(int id);
 }

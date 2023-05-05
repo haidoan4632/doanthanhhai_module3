@@ -1,6 +1,6 @@
 package service.impl;
 
-import model.ProductManagement;
+import model.Product;
 import repository.IProductRepository;
 import repository.impl.ProductRepository;
 import service.IProductService;
@@ -11,23 +11,23 @@ public class ProductService implements IProductService {
     private IProductRepository productRepository = new ProductRepository();
 
     @Override
-    public List<ProductManagement> findAll() {
-        List<ProductManagement> productManagementList = productRepository.findAll();
-        if (productManagementList.size() == 0) {
+    public List<Product> findAll() {
+        List<Product> productList = productRepository.findAll();
+        if (productList.size() == 0) {
             System.out.println("Không có dữ liệu");
             return null;
         }
-        return productManagementList;
+        return productList;
     }
 
     @Override
-    public void save(ProductManagement productManagement) {
-        productRepository.save(productManagement);
+    public void save(Product product) {
+        productRepository.save(product);
     }
 
     @Override
-    public void update(int id, ProductManagement productManagement) {
-        productRepository.update(id, productManagement);
+    public void update(int id, Product product) {
+        productRepository.update(id, product);
 
     }
 
@@ -38,7 +38,8 @@ public class ProductService implements IProductService {
 
 
     @Override
-    public ProductManagement findName(String name) {
-          return productRepository.findName(name);
+    public Product findById(int id) {
+        Product product = productRepository.findById(id);
+        return product;
     }
 }

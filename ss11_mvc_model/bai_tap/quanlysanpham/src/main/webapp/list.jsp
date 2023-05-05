@@ -36,7 +36,7 @@
     </thead>
     <tbody>
 
-    <c:forEach var="product" items="${productManagementList}">
+    <c:forEach var="product" items="${productList}">
         <tr>
             <td>${product.getId()}</td>
             <td>${product.getNameProduct()}</td>
@@ -50,7 +50,7 @@
                 </button>
             </th>
             <th>
-                <button onclick="window.location.href='/Product?action=edit&id=${product.getId()}'" type="button"
+                <button onclick="window.location.href='/productManagament?action=edit&id=${product.getId()}'" type="button"
                         class="btn btn-secondary">Edit
                 </button>
             </th>
