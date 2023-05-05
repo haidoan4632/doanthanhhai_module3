@@ -80,7 +80,7 @@ public class ProductServlet extends HttpServlet {
         String nameProduct = request.getParameter("nameProduct");
         String productDescription = request.getParameter("ProductDescription");
         String producer = request.getParameter("Producer");
-        productService.update(id, new Product(nameProduct, rateProduct, productDescription, producer));
+        productService.update(id, new Product(id,nameProduct, rateProduct, productDescription, producer));
         showList(request, response);
     }
 

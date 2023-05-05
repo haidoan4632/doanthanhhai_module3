@@ -18,13 +18,6 @@ public class Product {
         this.producer = producer;
     }
 
-    public Product(String nameProduct, int rateProduct, String productDescription, String producer) {
-        this.nameProduct = nameProduct;
-        this.rateProduct = rateProduct;
-        this.productDescription = productDescription;
-        this.producer = producer;
-    }
-
     public int getId() {
         return id;
     }
