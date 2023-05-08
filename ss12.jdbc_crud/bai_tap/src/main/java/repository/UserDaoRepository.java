@@ -15,7 +15,7 @@ public class UserDaoRepository implements IUserDaoRepository {
     //    private final String SELECT_ALL = "SELECT * FROM demo1.users;";
 //    private final String DELETE_ID = "DELETE FROM users WHERE id =?;";
 //private final String UPDATE_USERS = "update users set name = ?,email= ?, country =? where id = ?;";
-    private final String INSERT_INTO = "INSERT INTO users(id,name,email,country) values(?,?,?,?);";
+    private final String INSERT_INTO = "INSERT INTO users(name,email,country) values(?,?,?);";
     private final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
     private final String SELECT_USER_BY_COUNTRY = "SELECT * FROM users WHERE country LIKE ?;";
     private final String SORT_NAME = "SELECT * FROM users ORDER BY users.name ASC;";
@@ -23,7 +23,6 @@ public class UserDaoRepository implements IUserDaoRepository {
     @Override
     public List<User> findAll() {
         List<User> userList = new ArrayList<>();
-        //kết nối db và trả về list
         Connection connection = BaseRepository.getConnectDB();
         try {
             CallableStatement callableStatement = connection.prepareCall(SELECT_ALL);
@@ -87,10 +86,10 @@ public class UserDaoRepository implements IUserDaoRepository {
         Connection connection = BaseRepository.getConnectDB();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_INTO);
-            preparedStatement.setInt(1, user.getId());
-            preparedStatement.setString(2, user.getName());
-            preparedStatement.setString(3, user.getEmail());
-            preparedStatement.setString(4, user.getCountry());
+            connection.setAutoCommit(false);
+            preparedStatement.setString(1, user.getName());
+            preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(3, user.getCountry());
             int rowAffect = preparedStatement.executeUpdate();
             if (rowAffect == 1) {
                 connection.commit();

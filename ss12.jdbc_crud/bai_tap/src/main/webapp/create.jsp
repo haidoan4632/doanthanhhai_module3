@@ -17,8 +17,6 @@
 
     <form action="/user?action=create" method="post">
         <div  class="form-group">
-        <label>ID</label>
-        <input class="form-control" name="id"><br>
         <label>Name</label>
         <input class="form-control" name="name"><br>
         <label>Email</label>
@@ -28,7 +26,5 @@
         <button class="btn btn-success" type="submit">Create</button>
         </div>
     </form>
-
-
 </body>
 </html>

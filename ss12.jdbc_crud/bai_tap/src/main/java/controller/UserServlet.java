@@ -1,8 +1,8 @@
 package controller;
 
 import model.User;
-import service.IUserDaoService;
-import service.UserDaoService;
+import service.IUserService;
+import service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @WebServlet(name = "UserServlet", urlPatterns = "/user")
 public class UserServlet extends HttpServlet {
-    private IUserDaoService userDaoService = new UserDaoService();
+    private IUserService userDaoService = new UserService();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -113,11 +113,10 @@ public class UserServlet extends HttpServlet {
     }
 
     private void showCreate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");
-        userDaoService.save(new User(id, name, email, country));
+        userDaoService.save(new User(name, email, country));
         showList(request, response);
     }
 
