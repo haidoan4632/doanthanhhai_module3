@@ -20,34 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cae3c7a-ce6e-4bb6-98f9-5fe842c28f31" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/src/main/java/controller/HomeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/src/main/java/controller/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/src/main/java/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/src/main/java/respository/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/src/main/java/respository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/src/main/java/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/src/main/java/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/src/main/webapp/view/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/src/main/webapp/view/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/thuc_hanh/src/main/java/dao/IUserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/thuc_hanh/src/main/java/dao/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/thuc_hanh/src/main/java/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/thuc_hanh/src/main/webapp/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/thuc_hanh/src/main/webapp/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss12.jdbc_crud/thuc_hanh/src/main/webapp/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss10_jsp_va_jstl/bai_tap/src/main/java/HienThiDanhSachKhachHangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_va_jstl/bai_tap/src/main/java/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/build/classes/java/main/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/build/classes/java/main/controller/ProductServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/build/classes/java/main/repository/impl/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/build/classes/java/main/repository/impl/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/build/classes/java/main/service/impl/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/build/classes/java/main/service/impl/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/build/libs/quanlysanpham-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc_model/bai_tap/quanlysanpham/build/libs/quanlysanpham-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dang_ky/dangKy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dang_ky/dangKy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss10_jsp_va_jstl/bai_tap/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/build/classes/java/main/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/build/classes/java/main/controller/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/build/classes/java/main/repository/UserDaoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/build/classes/java/main/repository/UserDaoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/build/classes/java/main/service/IUserDaoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/build/classes/java/main/service/UserDaoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/build/libs/user_manager-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/build/libs/user_manager-1.0-SNAPSHOT.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +60,14 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -80,13 +77,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="19" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ss10_jsp_va_jstl/thuc_hanh" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ss12.jdbc_crud/bai_tap/src/main/webapp/create.jsp" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
@@ -150,6 +155,7 @@
       <workItem from="1682563883458" duration="859000" />
       <workItem from="1682564989084" duration="179000" />
       <workItem from="1683133884044" duration="143000" />
+      <workItem from="1683515876470" duration="6692000" />
     </task>
     <servers />
   </component>
@@ -169,10 +175,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1683134026534">
+    <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1683518463038">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1683134026534" />
+    <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1683518463038" />
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1683527160909">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1683527160909" />
     <state x="209" y="19" key="new project wizard" timestamp="1682565167162">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

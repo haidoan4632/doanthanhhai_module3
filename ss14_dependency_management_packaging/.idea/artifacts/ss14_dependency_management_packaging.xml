@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="ss14_dependency_management_packaging">
+    <output-path>$PROJECT_DIR$/out/artifacts/ss14_dependency_management_packaging</output-path>
+    <root id="root">
+      <element id="archive" name="ss14_dependency_management_packaging.jar">
+        <element id="module-output" name="ss14_dependency_management_packaging" />
+      </element>
+    </root>
+  </artifact>
+</component>
