@@ -18,27 +18,31 @@
 <a href="/customer">
     <button style="margin-left: 10px">Hiển thị danh sách khách hàng</button>
 </a>
-<table class="table table-striped" style="margin-left:10px ;width: 70%;border:solid deepskyblue">
-    <tr>
-        <th colspan="4" style="text-align: center;">Danh sách khách hàng</th>
-    </tr>
-    <tr>
-        <th>Tên</th>
-        <th>Ngày sinh</th>
-        <th>Địa chỉ</th>
-        <th>Ảnh</th>
-    </tr>
+<div class="container" style="margin:0 auto; ">
 
-    <c:forEach var="lisCustomer" items="${customerList}">
+    <table class="table table-striped" style="margin-left:10px ;width: 70%;border:solid deepskyblue">
         <tr>
-            <td>${lisCustomer.getName()} </td>
-            <td>${lisCustomer.getDateOfBirth()} </td>
-            <td>${lisCustomer.getAddress()} </td>
-            <td>
-                <img src="${lisCustomer.getImage()}" alt="" width="100px">
-            </td>
+            <th colspan="4" style="text-align: center;">Danh sách khách hàng</th>
         </tr>
-    </c:forEach>
-</table>
+        <tr>
+            <th>Tên</th>
+            <th>Ngày sinh</th>
+            <th>Địa chỉ</th>
+            <th>Ảnh</th>
+        </tr>
+
+        <c:forEach var="lisCustomer" items="${customerList}">
+            <tr>
+                <td>${lisCustomer.getName()} </td>
+                <td>${lisCustomer.getDateOfBirth()} </td>
+                <td>${lisCustomer.getAddress()} </td>
+                <td>
+                    <img src="${lisCustomer.getImage()}" alt="" width="100px">
+                </td>
+            </tr>
+        </c:forEach>
+    </table>
+
+</div>
 </body>
 </html>
