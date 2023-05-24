@@ -1,9 +1,9 @@
 * {
-    margin: 0px;
-    box-sizing: border-box;
+margin: 0px;
+box-sizing: border-box;
 }
 #view{
-    position: relative;
+    /*position: relative;*/
 
 }
 .header{
@@ -38,14 +38,14 @@ ul{
     list-style: none;
 }
 .container{
-    position: relative;
+    position: absolute;
     top:50px;
     left: 0px;
     right: 0px;
     height: calc(100vh - 100px);
 }
 .center{
-    display: block;
+    display: inline-block;
     text-align: center;
     padding-top: 50px;
 }
@@ -112,37 +112,36 @@ p{
     .col-l-11 {width: 91.66667%;}
     .col-l-12 {width: 100%;}
 }
+.button1{
+    display: block;
+    position: relative;
+    text-align: center;
+}
 
-    .button2{
-        display: block;
-        border: 1px solid lightgrey;
-        background-color: gainsboro;
-        padding: 40px 50px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        text-align: center;
+.button2{
+    border: 1px solid lightgrey;
+    background-color: gainsboro;
+    padding: 40px 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
-    }
-
-    .login {
-        color: white;
-        list-style: none;
-        display: inline;
-    }
+.login {
+    color: white;
+    list-style: none;
+    display: inline;
+}
 .footer{
-    position: fixed;
+    position: absolute;
+    bottom: 0px;
     background:#7abaff;
     height: 50px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
     align-items: center;
     justify-content: center;
 }
+
 
 .row{
     display: flex;
     flex-wrap: wrap;
 }
-
-
