@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "BookManagementServlet", urlPatterns = "/bookManagement")
@@ -66,10 +67,10 @@ public class BookManagementServlet extends HttpServlet {
             case "searchByTitle":
                 String name = request.getParameter("titleSearch");
                 Book book = bookManagementservice.findTitle(name);
-                if (book!=null){
-                    request.setAttribute("book",book);
-                    request.getRequestDispatcher("view/list.jsp").forward(request, response);
-                }
+                List<Book> bookList = new ArrayList<>();
+                bookList.add(book);
+                request.setAttribute("bookList", bookList);
+                request.getRequestDispatcher("view/list.jsp").forward(request, response);
                 break;
             default:
                 listBook(request, response);

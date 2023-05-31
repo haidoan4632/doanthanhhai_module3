@@ -63,7 +63,7 @@ public class BookManagementRepository implements IBookManagementRepository {
     @Override
     public Book findTitle(String title) {
         for (int i = 0; i < bookList.size(); i++) {
-            if (bookList.get(i).getTitle() == title) {
+            if (bookList.get(i).getTitle().equals(title)) {
                 return bookList.get(i);
             }
         }
