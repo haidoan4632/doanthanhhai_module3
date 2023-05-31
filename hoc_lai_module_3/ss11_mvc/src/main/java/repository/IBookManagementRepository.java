@@ -9,11 +9,11 @@ public interface IBookManagementRepository {
 
     public void create(Book book);
 
-    public void update(int id, Book book);
+    public void update(Book book);
 
     public void delete(int id);
 
-    Book findById(int id);
+    Integer findById(int id);
 
     Book findTitle(String title);
 }

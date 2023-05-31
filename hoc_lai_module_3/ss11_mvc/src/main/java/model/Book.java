@@ -7,8 +7,22 @@ public class Book {
     private String author;
     private String category;
 
-    public Book() {
+    public Book(String title, int pageSize, String author, String category) {
+
+        this.title = title;
+        this.pageSize = pageSize;
+        this.author = author;
+        this.category = category;
     }
+
+    public Book(int id, String title, int pageSize, String author, String category) {
+        this.id = id;
+        this.title = title;
+        this.pageSize = pageSize;
+        this.author = author;
+        this.category = category;
+    }
+
 
     public int getId() {
         return id;

@@ -5,6 +5,7 @@ import repository.IBookManagementRepository;
 import repository.impl.BookManagementRepository;
 import service.IBookManagementservice;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 public class BookManagementService implements IBookManagementservice {
@@ -19,14 +20,15 @@ public class BookManagementService implements IBookManagementservice {
     }
 
     @Override
-    public void create(Book book) {
-        bookManagementRepository.create(book);
+    public void create(HttpServletRequest request) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String title = request.getParameter("title");
+        int pageSize = Integer.parseInt(request.getParameter("pageSize"));
+        String author = request.getParameter("author");
+        String category = request.getParameter("category");
+        bookManagementRepository.create(new Book(id, title, pageSize, author, category));
     }
 
-    @Override
-    public void update(int id, Book book) {
-        bookManagementRepository.update(id, book);
-    }
 
     @Override
     public void delete(int id) {
@@ -34,7 +36,7 @@ public class BookManagementService implements IBookManagementservice {
     }
 
     @Override
-    public Book findById(int id) {
+    public Integer findById(int id) {
         if (bookManagementRepository.findById(id) != null) {
             return bookManagementRepository.findById(id);
         }
@@ -48,4 +50,17 @@ public class BookManagementService implements IBookManagementservice {
         }
         return null;
     }
+
+    @Override
+    public void update(HttpServletRequest request) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String title = request.getParameter("title");
+        int pageSize = Integer.parseInt(request.getParameter("pageSize"));
+        String author = request.getParameter("author");
+        String category = request.getParameter("category");
+        Book book = new Book(id,title,pageSize,author,category);
+        bookManagementRepository.update( book);
+    }
+
+
 }
