@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Thêm sản phẩm</title>
+    <title>Sách</title>
 </head>
 <body>
 <form action="/bookManagement?action=create" method="post">

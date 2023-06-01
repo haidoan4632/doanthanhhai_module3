@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6090ac37-31b6-4875-8011-6d4092a28c03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../bai_thi_mau/src/main/java/config/FilterUTF8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bai_thi_mau/src/main/java/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bai_thi_mau/src/main/webapp/view/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/du_an/src/main/webapp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_jsp_va_jstl/bai_tap/src/main/java/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_jsp_va_jstl/bai_tap/src/main/java/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dự phòng/C0123G1-Repo-BE" beforeDir="false" afterPath="$PROJECT_DIR$/../dự phòng/C0123G1-Repo-BE" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +23,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bai_tap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hoc_lai_module_3/ss11_mvc" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -42,6 +37,7 @@
       <updated>1683425946569</updated>
       <workItem from="1683425947719" duration="11000" />
       <workItem from="1683475987748" duration="7000" />
+      <workItem from="1685586581454" duration="684000" />
     </task>
     <servers />
   </component>
@@ -49,9 +45,9 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1683475993503">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1685587429923">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1683475993503" />
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1685587429923" />
   </component>
 </project>

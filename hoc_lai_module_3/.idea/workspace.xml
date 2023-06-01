@@ -19,89 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f6624d7-9dea-40ba-be41-50977eb471a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyen_tap_case/28/5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyen_tap_case/abcxyz.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyen_tap_case/asd.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyen_tap_case/case.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyen_tap_case/giao_dien_quan_ly/quan_ly_nhan_vien.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyen_tap_case/luyentap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/java/Controller/NhanVienServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/java/Model/NhanVien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/java/Repository/IRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/java/Repository/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/java/Service/IService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/java/Service/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.bootstrap4.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.bootstrap5.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.bootstrap5.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.bulma.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.bulma.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.dataTables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.dataTables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.foundation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.foundation.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.jqueryui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.jqueryui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.semanticui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/dataTables.semanticui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/jquery.dataTables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/css/jquery.dataTables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/jquery/jquery-3.5.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.bootstrap4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.bootstrap4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.bootstrap5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.bootstrap5.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.bulma.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.bulma.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.foundation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.foundation.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.jqueryui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.jqueryui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.semanticui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/dataTables.semanticui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/jquery.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhanvien/src/main/webapp/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhap_31_5/nhap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhap_31_5/nhap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/BookServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/IBookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/IBookService.java" afterDir="false" />
+    <list default="true" id="474ca991-69af-460a-bdff-43b3c1c4185d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/src/main/java/repository/BaseRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dự phòng/C0123G1-Repo-BE" beforeDir="false" afterPath="$PROJECT_DIR$/../dự phòng/C0123G1-Repo-BE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hoc_lai_module_3.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mvc/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mvc/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mvc/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mvc/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mvc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc/src/main/java/controller/BookManagementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/src/main/java/controller/BookManagementServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc/src/main/java/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/src/main/java/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc/src/main/java/repository/impl/BookManagementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/src/main/java/repository/impl/BookManagementRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc/src/main/java/service/IBookManagementservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/src/main/java/service/IBookManagementservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss11_mvc/build/libs/ss11_mvc-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/build/libs/ss11_mvc-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mvc/src/main/java/service/impl/BookManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/src/main/java/service/impl/BookManagementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mvc/src/main/webapp/view/Create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/src/main/webapp/view/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss11_mvc/src/main/webapp/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mvc/src/main/webapp/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mvc/src/main/webapp/view/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_jsp_va_jstl/thuc_hanh/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_jsp_va_jstl/thuc_hanh/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_jsp_va_jstl/thuc_hanh/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_jsp_va_jstl/thuc_hanh/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_jsp_va_jstl/thuc_hanh/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_jsp_va_jstl/thuc_hanh/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12.jdbc_crud/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12.jdbc_crud/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,52 +50,39 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2QXOzty3gymZnZfd0gpcVGjXzcO" />
+  <component name="ProjectId" id="2QawTzE2lSOPVKo8Kk5WQZDcGHV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ss11_mvc" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\module 3\hoc_lai_module_3\src\main\webapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\module 3\hoc_lai_module_3\src\main\webapp" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8f6624d7-9dea-40ba-be41-50977eb471a1" name="Default Changelist" comment="" />
-      <created>1685496724388</created>
+      <changelist id="474ca991-69af-460a-bdff-43b3c1c4185d" name="Default Changelist" comment="" />
+      <created>1685605011435</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1685496724388</updated>
-      <workItem from="1685496730684" duration="1729000" />
-      <workItem from="1685521422712" duration="1297000" />
+      <updated>1685605011435</updated>
+      <workItem from="1685605015164" duration="422000" />
     </task>
     <servers />
   </component>
@@ -175,12 +99,15 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1685499954275">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1685605411694">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1685499954275" />
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1685605411694" />
+    <state x="209" y="19" key="new project wizard" timestamp="1685605439882">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="209" y="19" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1685605439882" />
   </component>
 </project>

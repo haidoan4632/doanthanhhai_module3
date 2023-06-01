@@ -59,7 +59,7 @@ public class BookManagementService implements IBookManagementservice {
         String author = request.getParameter("author");
         String category = request.getParameter("category");
         Book book = new Book(id,title,pageSize,author,category);
-        bookManagementRepository.update( book);
+        bookManagementRepository.update(book);
     }
 
 

@@ -52,7 +52,7 @@
             <th>Xóa</th>
 
         </tr>
-        <c:forEach var="book" items="${bookList}">
+        <c:forEach var="book" items="${bookList}" >
             <tr>
                 <td>${book.id}</td>
                 <td>${book.title}</td>
@@ -91,9 +91,9 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
-                                    <%--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Không cho xóa--%>
-                                    <%--                                </button>--%>
-                                <button type="submit" class="btn btn-danger">Không cho xóa</button>
+<%--                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Không cho xóa--%>
+<%--                                                                    </button>--%>
+                                <button type="submit" class="btn btn-danger"> xóa</button>
                             </div>
                         </div>
                     </div>
