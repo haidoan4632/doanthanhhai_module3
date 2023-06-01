@@ -5,13 +5,13 @@ import model.Book;
 import java.util.List;
 
 public interface IBookManagementRepository {
-    public List<Book> findAll();
+     List<Book> findAll();
 
-    public void create(Book book);
+     void create(Book book);
 
-    public void update(Book book);
+     void update(Book book);
 
-    public void delete(int id);
+     void delete(int id);
 
     Integer findById(int id);
 

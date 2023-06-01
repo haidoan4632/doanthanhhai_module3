@@ -12,6 +12,10 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<link rel="stylesheet" href="bootstrap520/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css"/>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -44,7 +48,9 @@
             <th>Số trang</th>
             <th>Tác giả</th>
             <th>Loại sách</th>
-            <th colspan="2">action</th>
+            <th>Cập nhật</th>
+            <th>Xóa</th>
+
         </tr>
         <c:forEach var="book" items="${bookList}">
             <tr>
@@ -54,41 +60,44 @@
                 <td>${book.author}</td>
                 <td>${book.category}</td>
                 <td>
-                    <a href="/bookManagement?action=update&id=${book.id}">Update</a>
+                    <a href="/bookManagement?action=update&id=${book.id}"><i class="fa-solid fa-file-pen"></i></a>
                 </td>
                 <td>
                     <button type="button" class="btn btn-danger btn-lg" data-toggle="modal"
                             data-target="#modelId${book.id}">
-                        Xóa
+                        <i class="fa-sharp fa-solid fa-trash"></i>
                     </button>
                 </td>
 
             </tr>
             <form action="/bookManagement?action=delete" method="post">
-            <!-- Modal -->
-            <div class="modal fade" id="modelId${book.id}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
-                 aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <input type="hidden" name="action" value="delete">
-                        <input type="hidden" name="id" value="${book.id}">
+                <!-- Modal -->
+                <div class="modal fade" id="modelId${book.id}" tabindex="-1" role="dialog"
+                     aria-labelledby="modelTitleId"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <input type="hidden" name="action" value="delete">
+                            <input type="hidden" name="id" value="${book.id}">
 
-                        <div class="modal-body">
-                            bạn có muốn xóa quyển sách có tên là ${book.title} không?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-danger">Xóa</button>
+                            <div class="modal-body">
+                                bạn có muốn xóa quyển sách có tên là ${book.title} không?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                                    <%--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Không cho xóa--%>
+                                    <%--                                </button>--%>
+                                <button type="submit" class="btn btn-danger">Không cho xóa</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </form>
         </c:forEach>
     </table>

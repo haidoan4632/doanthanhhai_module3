@@ -7,12 +7,12 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 public interface IBookManagementservice {
-    public List<Book> findAll();
+     List<Book> findAll();
 
-    public void create(HttpServletRequest request);
+     void create(HttpServletRequest request);
 
 
-    public void delete(int id);
+     void delete(int id);
 
     Integer findById(int id);
 
