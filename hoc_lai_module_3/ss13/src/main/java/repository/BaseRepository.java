@@ -5,19 +5,18 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class BaseRepository {
-    private static String jdbcURL = "jdbc:mysql://localhost:3307/library";
-    private static String jdbcUsername = "root";
-    private static String jdbcPassword = "codegym";
-    private static Connection connection;
-
-    public static Connection getConnection() {
-        if (connection == null) {
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
-                connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
-            } catch (SQLException | ClassNotFoundException e) {
-                e.printStackTrace();
-            }
+    private static final String URL ="jdbc:mysql://localhost:3306/library"; // sửa lại tên của csdl
+    private static final String USER ="root";// mặc định của mysql
+    private static final String PASS ="codegym";// do cài đặt khi cài đặt mysql
+    public static Connection getConnectDB(){
+        Connection connection = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection= DriverManager.getConnection(URL,USER,PASS);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
         return connection;
     }

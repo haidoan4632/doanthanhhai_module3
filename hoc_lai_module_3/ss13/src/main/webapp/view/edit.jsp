@@ -10,52 +10,40 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="../css/bootstrap-grid.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
+
 </head>
 <body>
-<div class="col-md-5 main">
-    <h1>Update book</h1>
-    <form action="" method="post">
-        <input type="hidden" name="id" value="${book.id}">
-        <label for="title">Input title: </label>
-        <input type="text" class="form-control" name="title" id="title"  value="${book.title}">
+<form action="/bookManagement?action=update" method="post">
+    <table>
+        <thead>
+        <tr>
+            <th><input hidden name="id" value="${id}"></th>
+        </tr>
 
-        <label for="pageSize">Input page size: </label>
-        <input type="text" class="form-control" name="pageSizeBook" id="pageSize" value="${book.pageSize}">
+        <tr>
+            <th><label for="b">Title</label></th>
+            <th><input id="b" name="title" placeholder="input name" type="text"></th>
+        </tr>
 
-        <%--    <label for="author">Input author: </label>--%>
-        <%--    <input type="text" class="form-control" name="author" id="author" value="${book.author}">--%>
+        <tr>
+            <th><label for="c">PageSize</label></th>
+            <th><input id="c" name="pageSize" placeholder="input pageSize" type="number"></th>
+        </tr>
+        <th><label for="x">Author</label></th>
+        <th><input id="x" name="author" placeholder="input author" type="text"></th>
 
-        <label for="authorID" id="authorID">Input Author name: </label>
-        <select class="form-select" name="authorId" >
-            <c:forEach var="author" items="${authorList}">
-                <c:if test="${author.authorId == book.author.authorId}">
-                    <option value="${author.authorId}" selected>${author.authorName}</option>
-                </c:if>
-                <c:if test="${author.authorId != book.author.authorId}">
-                    <option value="${author.authorId}">${author.authorName}</option>
-                </c:if>
-            </c:forEach>
-        </select>
-
-        <label for="categoryID" id="categoryID">Input category name: </label>
-        <select class="form-select" name="categoryID" >
-            <c:forEach var="category" items="${categoryList}">
-                <c:if test="${category.idCategory == book.category.idCategory}">
-                    <option value="${category.idCategory}" selected>${category.nameCategory}</option>
-                </c:if>
-                <c:if test="${category.idCategory != book.category.idCategory}">
-                    <option value="${category.idCategory}">${category.nameCategory}</option>
-                </c:if>
-            </c:forEach>
-        </select>
-
-        <input type="submit" value="Update" class="btn btn-secondary mt-3" style="background: #3d3c3c; margin-top: 10px;margin-left: 200px">
-    </form>
-</div>
-<script src="../js/bootstrap.bundle.js">
-</script>
+        <tr>
+            <th><label for="y">Category</label></th>
+            <th><input id="y" name="category" placeholder="input category" type="text"></th>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <button type="submit" style="float: right">Chỉnh sửa sách</button>
+            </th>
+        </tr>
+        </thead>
+    </table>
+</form>
 
 </body>
 </html>

@@ -37,7 +37,7 @@ public class BookService implements IBookService {
 
     @Override
     public void delete(int id) {
-        iBookRepository.deleteBook(id);
+        iBookRepository.delete(id);
     }
 
     @Override
@@ -45,23 +45,4 @@ public class BookService implements IBookService {
         iBookRepository.updateBook(id, book);
     }
 
-    @Override
-    public boolean deleteBook(int id) {
-        try {
-            this.iBookRepository.deleteBook(id);
-            return true;
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @Override
-    public List<Author> authorList() throws SQLException {
-        return iBookRepository.authorList();
-    }
-
-    @Override
-    public List<Category> categoryList() throws SQLException {
-        return iBookRepository.categoryList();
-    }
 }

@@ -15,49 +15,35 @@
 
 </head>
 <body>
-<div class="container" style="font-size: x-large;margin-left: 40rem">
-    <form action="" method="post">
-        <h1>Create Book</h1>
-        <%--    <div class="form-group">--%>
-        <%--      <label for="id">ID Book</label>--%>
-        <%--      <input type="text"--%>
-        <%--             class="form-control" name="idBook" id="id" aria-describedby="helpId" placeholder="Input id book">--%>
-        <%--    </div>--%>
+<form action="/bookManagement?action=create" method="post">
+    <table>
+        <thead>
+        <tr>
+            <th><label for="a">ID</label></th>
+            <th><input pattern="" id="a" name="id" placeholder="input id" type="number"></th>
+        </tr>
 
-        <div class="form-group">
-            <label for="title">Title</label>
-            <input type="text"
-                   class="form-control" name="titleBook" id="title" aria-describedby="helpId" placeholder="Input title book">
-        </div>
-        <div class="form-group">
-            <label for="pageSize">Page size</label>
-            <input type="text"
-                   class="form-control" name="pageSize" id="pageSize" aria-describedby="helpId" placeholder="Input page size book">
-        </div>
-        <div class="form-group">
-            <label for="authorID" id="authorID">Author</label>
-            <select class="form-select" name="authorID">
-                <c:forEach var="author" items="${authorList}">
-                    <option  value="${author.authorId}">${author.authorName}</option>
-                </c:forEach>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="categoryID" id="categoryID" >Category</label>
-            <select class="form-select" name="categoryID">
-                <c:forEach var="category" items="${categoryList}">
-                    <option  value="${category.idCategory}">${category.nameCategory}</option>
-                </c:forEach>
-            </select>
-        </div>
-        <div>
-            <button type="submit" class="btn btn-success" role="button">Create</button>
-            <button class="btn btn-warning">Cancel</button>
-        </div>
-    </form>
-</div>
+        <tr>
+            <th><label for="b">Title</label></th>
+            <th><input id="b" name="title" placeholder="input name" type="text"></th>
+        </tr>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <tr>
+            <th><label for="c">PageSize</label></th>
+            <th><input id="c" name="pageSize" placeholder="input pageSize" type="number"></th>
+        </tr>
+        <th><label for="x">Author</label></th>
+        <th><input id="x" name="author" placeholder="input author" type="text"></th>
+
+        <tr>
+            <th><label for="y">Category</label></th>
+            <th><input id="y" name="category" placeholder="input category" type="text"></th>
+        </tr>
+        <tr>
+            <th colspan="2"> <button type="submit" style="float: right">Thêm sách</button></th>
+        </tr>
+        </thead>
+    </table>
+</form>
 </body>
 </html>
