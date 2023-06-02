@@ -89,8 +89,6 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
-                                    <%--                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Không cho xóa--%>
-                                    <%--                                                                    </button>--%>
                                 <button type="submit" class="btn btn-danger"> xóa</button>
                             </div>
                         </div>

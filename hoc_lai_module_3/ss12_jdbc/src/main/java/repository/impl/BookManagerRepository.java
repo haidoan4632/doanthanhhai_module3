@@ -14,6 +14,8 @@ import java.util.List;
 
 public class BookManagerRepository implements IBookManagerRepository {
     private final String SELECT_BOOK = "select books.id,books.title,books.page_size,category.name from books JOIN category on books.id_category = category.id;";
+    private final String DELETE_BOOK = "delete from books where id = ?;";
+    private final String INSERT_INTO = "INSERT INTO books(id,title,page_size,) values(?,?,?,?);";
 
     @Override
     public List<Book> getAll() {
@@ -36,5 +38,47 @@ public class BookManagerRepository implements IBookManagerRepository {
             e.printStackTrace();
         }
         return bookList;
+    }
+
+    @Override
+    public void create(Book book) {
+        Connection connection = BaseRepository.getConnectDB();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_INTO);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void update(Book book) {
+
+    }
+
+    @Override
+    public void delete(int id) {
+        Connection connection = BaseRepository.getConnectDB();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_BOOK);
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public Integer findById(int id) {
+        return null;
+    }
+
+    @Override
+    public Book findTitle(String title) {
+        return null;
     }
 }

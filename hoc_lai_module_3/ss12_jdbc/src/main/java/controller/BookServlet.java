@@ -42,7 +42,31 @@ public class BookServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = "";
+        }
+        switch (action) {
+            case "create":
 
+
+                break;
+            case "update":
+                break;
+            case "searchByTitle":
+                break;
+            case "delete":
+                deleteBook(request, response);
+                response.sendRedirect("/bookManagement");
+                break;
+            default:
+                showList(request, response);
+        }
+    }
+
+    private void deleteBook(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        bookManagerSerivce.delete(id);
     }
 
 
