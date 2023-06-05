@@ -32,15 +32,30 @@
             <th><label for="c">PageSize</label></th>
             <th><input id="c" name="pageSize" placeholder="input pageSize" type="number"></th>
         </tr>
-        <th><label for="x">Author</label></th>
-        <th><input id="x" name="author" placeholder="input author" type="text"></th>
+
 
         <tr>
-            <th><label for="y">Category</label></th>
-            <th><input id="y" name="category" placeholder="input category" type="text"></th>
+            <th><label for="x">Author</label></th>
+            <th><input hidden id="x" name="author" placeholder="input author" type="text"></th>
         </tr>
         <tr>
-            <th colspan="2"> <button type="submit" style="float: right">Thêm sách</button></th>
+            <th><label for="y">ID Author</label></th>
+            <th><input id="y" name="idAuthor" placeholder="input id author" type="number"></th>
+        </tr>
+
+        <tr>
+            <th><label for="z">Category</label></th>
+            <th><input id="z" hidden name="category" placeholder="input category" type="text"></th>
+        </tr>
+
+        <tr>
+            <th><label for="m">ID Category</label></th>
+            <th><input id="m" name="idCategory" placeholder="input id category" type="number"></th>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <button type="submit" style="float: right">Thêm sách</button>
+            </th>
         </tr>
         </thead>
     </table>

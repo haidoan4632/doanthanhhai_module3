@@ -61,46 +61,51 @@
                 <td>${book.category.nameCategory}</td>
                 <td>${book.author.authorName}</td>
                 <td>
-                    <a href="/bookManagement?action=update&id=${book.id}"><i class="fa-solid fa-file-pen"></i></a>
+                    <a href="/bookManagement?action=edit&id=${book.id}"><i class="fa-solid fa-file-pen"></i></a>
                 </td>
                 <td>
                     <button type="button" class="btn btn-danger btn-lg" data-toggle="modal"
-                            data-target="#modelId${book.id}">
+                            data-target="#modelId"
+                            onclick="remove(${book.id},'${book.title}')">
                         <i class="fa-sharp fa-solid fa-trash"></i>
                     </button>
                 </td>
 
             </tr>
-            <form action="/bookManagement?action=delete" method="post">
-                <!-- Modal -->
-                <div class="modal fade" id="modelId${book.id}" tabindex="-1" role="dialog"
-                     aria-labelledby="modelTitleId"
-                     aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <input type="hidden" name="action" value="delete">
-                            <input type="hidden" name="id" value="${book.id}">
 
-                            <div class="modal-body">
-                                bạn có muốn xóa quyển sách có tên là ${book.title} không?
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
-                                <button type="submit" class="btn btn-danger"> xóa</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
         </c:forEach>
     </table>
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog"
+         aria-labelledby="modelTitleId"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modelTitleId">Xóa sách</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    bạn có muốn xóa quyển sách có tên là <span style="color:red" id="nameDelete"></span> không?
+                </div>
+                <div class="modal-footer">
+                    <form action="/bookManagement?action=delete" method="post">
+                        <input type="hidden" name="idDelete" id="idDelete">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                        <button type="submit" class="btn btn-danger"> Có</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
+<script>
+    function remove(id, name) {
+        document.getElementById("nameDelete").innerText = name;
+        document.getElementById("idDelete").value = id;
+    }
+</script>
 </body>
 </html>

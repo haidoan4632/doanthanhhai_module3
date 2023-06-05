@@ -13,37 +13,50 @@
 
 </head>
 <body>
-<form action="/bookManagement?action=update" method="post">
+<form action="/bookManagement?action=edit" method="post">
     <table>
         <thead>
         <tr>
-            <th><input hidden name="id" value="${id}"></th>
+            <th><label for="a">ID</label></th>
+            <th><input pattern="" id="a" name="id" value="${book.id}" type="number"></th>
         </tr>
 
         <tr>
             <th><label for="b">Title</label></th>
-            <th><input id="b" name="title" placeholder="input name" type="text"></th>
+            <th><input id="b" name="title" value="${book.title}" type="text"></th>
         </tr>
 
         <tr>
             <th><label for="c">PageSize</label></th>
-            <th><input id="c" name="pageSize" placeholder="input pageSize" type="number"></th>
+            <th><input id="c" name="pageSize" value="${book.pageSize}" type="number"></th>
         </tr>
-        <th><label for="x">Author</label></th>
-        <th><input id="x" name="author" placeholder="input author" type="text"></th>
+
 
         <tr>
-            <th><label for="y">Category</label></th>
-            <th><input id="y" name="category" placeholder="input category" type="text"></th>
+            <th><label for="x">Author</label></th>
+            <th><input hidden id="x" name="author" type="text"></th>
+        </tr>
+        <tr>
+            <th><label for="y">ID Author</label></th>
+            <th><input id="y" name="idAuthor" value="${book.author.authorId}" type="number"></th>
+        </tr>
+
+        <tr>
+            <th><label for="z">Category</label></th>
+            <th><input id="z" hidden name="category" type="text"></th>
+        </tr>
+
+        <tr>
+            <th><label for="m">ID Category</label></th>
+            <th><input id="m" name="idCategory" value="${book.category.idCategory}" type="number"></th>
         </tr>
         <tr>
             <th colspan="2">
-                <button type="submit" style="float: right">Chỉnh sửa sách</button>
+                <button type="submit" style="float: right">Sửa thông tin sách</button>
             </th>
         </tr>
         </thead>
     </table>
 </form>
-
 </body>
 </html>
